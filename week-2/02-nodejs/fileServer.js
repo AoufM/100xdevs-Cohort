@@ -17,6 +17,7 @@ const fs = require("fs");
 const path = require("path");
 const app = express();
 
+
 app.get("/", (req, res) => {
   res.send("hello");
 });
@@ -28,15 +29,15 @@ app.get("/files", function (req, res) {
       return res.status(404).send("Couldn't retrive files");
       
     }
-
-    res.send(files);
+   res.json(files);
   });
 });
 
-app.get("/files/:filename", function (req, res) {
-  const directory= path.join(__dirname,'./files/', req.params.filename);
-  fs.readFile(directory, "utf-8", (err, files) => {
-    if (err) {
+app.get("/files/:abc", function (req, res) {
+  const directory= path.join(__dirname,'./files/', req.params.abc);
+  fs.readFile(directory, "utf-8", (ab, files) => {
+    if (ab) {
+      console.log(ab);
       return res.status(404).send("File not found");
     }
     res.send(files);
