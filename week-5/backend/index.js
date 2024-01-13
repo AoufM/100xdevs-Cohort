@@ -11,14 +11,14 @@ app.get("/get", async (req, res) => {
   res.json({ cards: data });
 });
 
-app.get("/get-one", async (req, res) => {
-  const { id } = req.body;
+// app.get("/get-one", async (req, res) => {
+//   const { id } = req.body;
 
-  const card = await Card.findOne({ id });
-  res.json({
-    card,
-  });
-});
+//   const card = await Card.findOne({ id });
+//   res.json({
+//     card,
+//   });
+// });
 
 app.put("/put", async (req, res) => {
   const { name, description, intrests, linkedIn, instagram, twitter, id } =
