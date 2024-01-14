@@ -15,14 +15,16 @@ function App() {
 
   return (
     <>
+  <div className="main-page">
       <UserInput setCardData={setCardData} />
       {
         cardData?.map((card)=>{
           return(
-              <BusinessCard cardData= {cardData} setReload={setReload}setCardData={setCardData} id={card.id} name={card.name} description={card.description} intrests={card.intrests} linkedIn={card.linkedIn} twitter={card.twitter} instagram={card.instagram}/>
+              <BusinessCard key={card.id} cardData= {cardData} setReload={setReload} setCardData={setCardData} id={card.id} name={card.name} description={card.description} intrests={card.intrests} linkedIn={card.linkedIn} twitter={card.twitter} instagram={card.instagram}/>
           )
         })
       }
+      </div>
     </>
   );
 }

@@ -10,7 +10,7 @@ const BusinessCard = ({
   instagram,
   setCardData,
   cardData,
-  setReload
+  setReload,
 }) => {
   function deleteCard(id) {
     fetch("http://localhost:4000/delete", {
@@ -66,40 +66,42 @@ const BusinessCard = ({
       }),
     })
       .then((res) => res.json())
-      .then( (data) => {
+      // .then((data) =>
+			// 	setCardData((prev) =>
+			// 		prev?.map((card) =>
+			// 			card.id == id ? data.updatedCard : card
+			// 		)
+			// 	)
+			// );
+      .then((data) => {
         console.log(data);
-        // const index=prev.findIndex((card) => card.id === +id)
-        // return prev.splice(index,1,data.updatedCard);
-        console.log(cardData)
-         setCardData((prev) =>{
-           
-          prev.map((card) => (card.id === +id ? data.updatedCard : card));
-          setReload((prev)=>prev+1)
-      });
-            console.log(cardData);
+        console.log(cardData);
+        window.location.reload();
       });
   }
 
   return (
     <>
-      <div className="name">
-        <h1> {name}</h1>
-      </div>
-      <div className="description">
-        <p>{description}</p>
-      </div>
-      <div className="intrests">
-        <h3>Intrests</h3>
-        <ul className="intrests-list">
-          {intrests?.map((item) => {
-            return <li>{item}</li>;
-          })}
-        </ul>
-      </div>
-      <div className="socials">
-        <a href={linkedIn}>LinkedIn</a>
-        <a href={twitter}>Twitter</a>
-        <a href={instagram}>Instagram</a>
+      <div className="business-card">
+        <div className="name">
+          <h1> {name}</h1>
+        </div>
+        <div className="description">
+          <p>{description}</p>
+        </div>
+        <div className="intrests">
+          <h3>Intrests</h3>
+          <ul className="intrests-list">
+            {intrests?.map((item, index) => {
+              return <li key={index}>{item}</li>;
+            })}
+          </ul>
+        </div>
+        <div className="socials">
+          <a href={linkedIn}>LinkedIn</a>
+          <a href={twitter}>Twitter</a>
+          <a href={instagram}>Instagram</a>
+        </div>
         <div>
           <button
             onClick={() =>

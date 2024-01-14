@@ -4,7 +4,7 @@ const mongoose= require('mongoose');
 
 mongoose.connect(mongoUrl);
 
-const CardSchema= new  mongoose.Schema({
+const CardSchema= new mongoose.Schema({
     id:Number,
     name:String,
     description:String,
