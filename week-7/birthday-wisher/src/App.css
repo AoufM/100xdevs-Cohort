@@ -1,0 +1,147 @@
+/* .background {
+  background-color: #1c1c1c;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name-input-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name-input-container h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  color: #1c1c1c;
+}
+
+.name-input-container input {
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: #1c1c1c;
+}
+
+.name-input-container button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #1c1c1c;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.name-input-container button:hover {
+  background-color: #fff;
+  color: #1c1c1c;
+} */
+body{
+  background-color: rgb(19, 18, 18);
+}
+.background {
+  background-color:rgba(255, 255, 255, 0.2); /* Adjust the color and transparency as needed */
+  color: white; /* Text color */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Inner spacing */
+  max-width: 600px; /* Maximum width */
+  text-align: center; /* Center text */
+  margin: auto auto;
+}
+
+.background input {
+  width: calc(100% - 40px); /* Full width minus padding */
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.5); /* Adjust the color and transparency as needed */
+  border-radius: 5px; /* Rounded corners */
+  border: none; /* Remove border */
+  margin-bottom: 10px; /* Spacing */
+}
+
+.background button {
+  background-color: #3775bd; /* Button color */
+    color: white; /* Text color */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* Remove border */
+    padding: 10px; /* Inner spacing */
+    width: 18%; /* Full width */
+    cursor: pointer; /* Change cursor on hover */
+    margin: 0 auto; /* Center horizontally */
+    display: block; /* Make it a block element */
+    transition: all 0.3s ease-in-out
+}
+
+.BirthdayWisher button:hover {
+  background-color: white; /* Change background color on hover */
+  color: black; /* Change text color on hover */
+}
+.birthday-cards {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.birthday-cards p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  /* background-color: #1c1c1c; */
+  border-radius: 10px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+
+.birthday-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+.birthday-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.birthday-card h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  color: #1c1c1c;
+  text-align: center;
+}
+
+.birthday-card p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: #1c1c1c;
+  text-align: center;
+}
